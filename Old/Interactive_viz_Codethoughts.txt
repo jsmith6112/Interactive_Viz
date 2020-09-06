@@ -1,0 +1,75 @@
+
+## Step 1: Plotly
+
+1. Use the D3 library to read in `samples.json`.
+
+d3.json("/data/users.json", function(data) {
+    console.log(data);
+});
+
+
+2. Create a horizontal bar chart with a dropdown menu to display the top 10 OTUs found in that individual.
+	
+ 1) User selects the individual or **name**
+	a) if name[i] = data.samples.id , then
+		Show barchart with top 10 id's - Use Slice to do this
+		Show Bubble chart
+		Show metadata.
+
+I need a function for plots (barchart), bubblechart
+I need a function for executing the charts
+I need a function to show the metadata
+
+
+Loop through the data once the selection - Event occurs.
+ Event is 
+
+- Need the data in a variable
+	-Need to limit the variable to the top 10 OTU' (by sample value)
+ 	- X - OTU_ids
+	- Y - sample_values
+	-hover text - otu_labels
+
+- Dropdown menu - How do I do that?
+
+Top 10 OTU's - We need to sort and show only the top 10.
+
+
+
+* Use `sample_values` as the values for the bar chart.
+
+* Use `otu_ids` as the labels for the bar chart.
+
+* Use `otu_labels` as the hovertext for the chart.
+
+  ![bar Chart](Images/hw01.png)
+
+  
+
+
+
+ 
+
+3. Create a bubble chart that displays each sample.
+
+* Use `otu_ids` for the x values.
+
+* Use `sample_values` for the y values.
+
+* Use `sample_values` for the marker size.
+
+* Use `otu_ids` for the marker colors.
+
+* Use `otu_labels` for the text values.
+
+![Bubble Chart](Images/bubble_chart.png)
+
+4. Display the sample metadata, i.e., an individual's demographic information.
+
+5. Display each key-value pair from the metadata JSON object somewhere on the page.
+
+![hw](Images/hw03.png)
+
+
+
+Paddington Mortgage - 8862 XX8862
